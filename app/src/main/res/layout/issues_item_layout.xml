@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <!-- Common Issues -->
+    <LinearLayout
+        android:id="@+id/issues_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/me_item_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/issue_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/common_issues"
+            android:textColor="@color/default_item_label_color"
+            android:layout_weight="1"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/issue_arrow_icon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/icon_arrow_blue_down"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <!-- issues content -->
+    <TextView
+        android:id="@+id/issue_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_margin="10dp"
+        android:text="@string/common_issues"
+        android:textColor="#B25C5C5C"
+        android:layout_weight="1"
+        android:textSize="14sp"
+        android:visibility="visible" />
+</LinearLayout>

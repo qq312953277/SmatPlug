@@ -1,0 +1,171 @@
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "com.phicomm.smartplug"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 9
+        versionName "1.0.0.2008"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        manifestPlaceholders = [
+                UMENG_APPKEY: "5992b628cae7e753be001dd6",
+        ]
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../phicomm-app-keystore.jks")
+            storePassword 'feixun*123'
+            keyAlias 'phicomm'
+            keyPassword 'feixun*123'
+        }
+    }
+
+    productFlavors {
+        // qa channel
+        qa {
+            manifestPlaceholders = [APP_CHANNEL_VALUE: "qa"]
+        }
+
+        // for QR code download channel
+        "1PSP" {
+            manifestPlaceholders = [APP_CHANNEL_VALUE: "1PSP"]
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    repositories {
+        flatDir {
+            dirs 'src/main/libs'
+        }
+    }
+
+    // rename output file
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def replaceNameStep1 = output.outputFile.name.replace("app", "SmartPlug-" + defaultConfig.versionName)
+            def replaceNameStep2 = replaceNameStep1.replace("debug", "debug" + "-${releaseTime()}")
+            def replaceNameStep3 = replaceNameStep2.replace("release", "release" + "-${releaseTime()}")
+            def newOutputApkFile = new File(rootProject.projectDir.absolutePath + "/SmartPlug-${android.defaultConfig.versionName}" + "/", replaceNameStep3)
+            output.outputFile = newOutputApkFile
+        }
+    }
+}
+
+def releaseTime() {
+    return new SimpleDateFormat("yyyyMMddHH").format(new Date())
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+
+    //constraint layout
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    //multidex
+    compile 'com.android.support:multidex:1.0.1'
+
+    //butterknife
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    //recycleview
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+
+    //BaseRecyclerViewAdapterHelper
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.24'
+
+    //gson
+    compile 'com.google.code.gson:gson:2.7'
+
+    //retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+
+    //gson converter for retrofit
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    //rxjava converter for retrofit
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+    //rxandroid
+    compile 'io.reactivex:rxandroid:1.1.0'
+
+    //rxjava
+    compile 'io.reactivex:rxjava:1.2.2'
+
+    //rx liftcycle
+    compile 'com.trello:rxlifecycle:0.3.0'
+    compile 'com.trello:rxlifecycle-components:0.3.0'
+
+    //okhttp log
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
+    //glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    //pull refresh
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
+
+    //eventbus
+    compile 'org.greenrobot:eventbus:3.0.0'
+
+    //phicomm
+    compile 'com.phicomm.region:region:1.2'
+    compile(name: 'PhiWidgets-1.0', ext: 'aar')
+    compile 'joda-time:joda-time:2.8.1'
+
+    //rx permissions
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
+
+    //rx binding
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+
+    //java annotations
+    compile 'org.jetbrains:annotations-java5:15.0'
+
+    compile 'com.github.lecho:hellocharts-android:v1.5.8'
+
+    //green dao
+    compile 'org.greenrobot:greendao:3.2.2'
+
+    //cordova
+    compile files('src/main/libs/crodova.jar')
+
+    //umeng analytics
+    compile 'com.umeng.analytics:analytics:latest.integration'
+
+    // leak canary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+}

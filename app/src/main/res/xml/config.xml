@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget
+    id="com.phicomm.smartplug"
+    version="1.0.0">
+    <feature name="Whitelist">
+        <param
+            name="android-package"
+            value="com.phicomm.smartplug.modules.webh5.WhitelistPlugin" />
+        <param
+            name="onload"
+            value="true" />
+    </feature>
+    <name>health app</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author
+        email="dev@cordova.apache.org"
+        href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <preference
+        name="loglevel"
+        value="DEBUG" />
+    <!--配置WebView可以打开的外部链接-->
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+</widget>

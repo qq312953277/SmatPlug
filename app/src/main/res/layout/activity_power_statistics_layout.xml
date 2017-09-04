@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:id="@+id/device_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar"
+        android:background="@drawable/select_device_work_wifi_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_rectangle_blue"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_btn_1"
+                style="@style/radiobutton_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_radiobutton_bg_left"
+                android:checked="true"
+                android:text="@string/this_month"
+                android:textColor="@drawable/radiobutton_text_selector" />
+
+            <RadioButton
+                android:id="@+id/radio_btn_2"
+                style="@style/radiobutton_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_radiobutton_bg_right"
+                android:text="@string/this_year"
+                android:textColor="@drawable/radiobutton_text_selector" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <com.phicomm.smartplug.view.CustomViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

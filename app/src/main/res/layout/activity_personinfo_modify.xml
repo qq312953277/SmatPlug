@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F6"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- avatar -->
+            <LinearLayout
+                android:id="@+id/avatar_area"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/personal_userinfo_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/account_icon_layout"
+                    android:layout_width="@dimen/avatar_size"
+                    android:layout_height="@dimen/avatar_size"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/usericon_bg_circle" />
+
+                    <com.phicomm.widgets.PhiRoundImageView
+                        android:id="@+id/old_avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:layout_margin="4dp"
+                        android:src="@drawable/default_avatar" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/update_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/update_avatar"
+                    android:textColor="@color/nickname_text_color"
+                    android:textSize="@dimen/text_size_14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp"
+                android:paddingLeft="@dimen/me_modify_padding"
+                android:paddingRight="@dimen/me_modify_padding">
+
+                <!-- nickname -->
+                <LinearLayout
+                    android:id="@+id/nickname_modify_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/me_item_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/me_modify_item_padding"
+                    android:paddingRight="@dimen/me_modify_item_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nickname"
+                        android:textColor="@color/default_item_label_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/nickname_modify"
+                        android:layout_width="@dimen/zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/me_modify_value_margin"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/input_nickname"
+                        android:maxLength="20"
+                        android:singleLine="true"
+                        android:textColor="@color/default_item_value_color"
+                        android:textColorHint="@color/default_item_hint_color"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <ImageView
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/right_arrow_blue" />
+                </LinearLayout>
+                <!-- gender -->
+                <LinearLayout
+                    android:id="@+id/gender_modify_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/me_item_bg"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/me_modify_item_padding"
+                    android:paddingRight="@dimen/me_modify_item_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gender"
+                        android:textColor="@color/default_item_label_color"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/sex_radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|right"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="10dp">
+
+                        <RadioButton
+                            android:id="@+id/sex_radio_btn_man"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/man"
+                            android:paddingLeft="10dp"
+                            android:button="@null"
+                            android:drawableRight="@drawable/sex_radiobutton_selector"
+                            android:drawablePadding="10dp"
+                            android:textColor="@color/default_item_hint_color"
+                            android:textSize="@dimen/text_size_14sp" />
+
+                        <RadioButton
+                            android:id="@+id/sex_radio_btn_woman"
+                            android:layout_marginLeft="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/woman"
+                            android:paddingLeft="10dp"
+                            android:button="@null"
+                            android:drawableRight="@drawable/sex_radiobutton_selector"
+                            android:drawablePadding="10dp"
+                            android:textColor="@color/default_item_hint_color"
+                            android:textSize="@dimen/text_size_14sp" />
+
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:src="@drawable/right_arrow_blue" />
+                </LinearLayout>
+                <!-- birthday -->
+                <LinearLayout
+                    android:id="@+id/birhdary_modify_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/me_item_bg"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/me_modify_item_padding"
+                    android:paddingRight="@dimen/me_modify_item_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/birthday"
+                        android:textColor="@color/default_item_label_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/birthday_modify"
+                        android:layout_width="@dimen/zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/me_modify_value_margin"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/setting_birthday"
+                        android:singleLine="true"
+                        android:textColor="@color/default_item_value_color"
+                        android:textColorHint="@color/default_item_hint_color"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <ImageView
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/right_arrow_blue" />
+                </LinearLayout>
+                <!-- reset password -->
+                <LinearLayout
+                    android:id="@+id/password_modify_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/me_item_bg"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/me_modify_item_padding"
+                    android:paddingRight="@dimen/me_modify_item_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/modify_password"
+                        android:textColor="@color/default_item_label_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/me_modify_value_margin"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/setting_birthday"
+                        android:singleLine="true"
+                        android:textColor="@color/default_item_value_color"
+                        android:textColorHint="@color/default_item_hint_color"
+                        android:textSize="@dimen/text_size_14sp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/right_arrow_blue" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_logout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/logout_btn_selector"
+            android:textColor="@drawable/button_colour_text_selector"
+            android:textSize="16dp"
+            android:layout_alignParentBottom="true"
+            android:textAllCaps="false"
+            android:text="@string/logout" />
+
+    </RelativeLayout>
+</LinearLayout>

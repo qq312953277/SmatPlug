@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <include layout="@layout/title_bar" />
+
+    <Gallery
+        android:id="@+id/device_list"
+        android:layout_width="fill_parent"
+        android:layout_height="151dp"
+        android:layout_below="@id/title_bar"
+        android:background="#B2D2FA"
+        android:spacing="45.0dip"
+        android:visibility="visible" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/task_confirm_button"
+        android:layout_below="@id/device_list"
+        android:background="@color/transparent"
+        android:overScrollMode="always"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/current_device_name"
+                android:layout_width="fill_parent"
+                android:layout_height="55.125dip"
+                android:layout_marginLeft="20.25dip"
+                android:gravity="center_vertical"
+                android:textColor="#ff2f3239"
+                android:textSize="17dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/control_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0dip" />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="11dp"
+                android:background="@color/transparent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:text="@string/add_task_tips"
+                    android:textColor="#7D5C5C5C"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:text="@string/trigger_tip"
+                    android:textColor="#7D5C5C5C"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:text="@string/main_control_tip"
+                    android:textColor="#7D5C5C5C"
+                    android:textSize="11dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/task_confirm_button"
+        android:layout_width="fill_parent"
+        android:layout_height="59.0625dip"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@color/gray_color"
+        android:text="@string/ok"
+        android:textAllCaps="false"
+        android:textColor="#ffffffff"
+        android:textSize="15.1875sp"
+        android:typeface="sans" />
+</RelativeLayout>

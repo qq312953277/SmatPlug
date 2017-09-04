@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/title_bar" />
+
+    <Gallery
+        android:id="@+id/trigger_list"
+        android:layout_width="fill_parent"
+        android:layout_height="151dp"
+        android:layout_below="@id/title_bar"
+        android:background="#B2D2FA"
+        android:spacing="45.0dip"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/manual_trigger"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/trigger_confirm_button"
+        android:layout_below="@id/trigger_list"
+        android:layout_marginTop="26.5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/manual_trigger_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:gravity="center_vertical"
+            android:text="@string/trigger_manually"
+            android:textColor="#ff2f3239"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/manual_trigger_description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/trigger_manually_prompt_long"
+            android:textColor="@color/gray_color"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timer_trigger"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/trigger_confirm_button"
+        android:layout_below="@id/trigger_list"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/repeat_date_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="17dp"
+            android:paddingTop="26.5dp"
+            android:singleLine="true"
+            android:text="@string/timer_repeat_date_text"
+            android:textSize="17dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="70.0dip"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/timer_repeat_date_7"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/timer_repeat_bg"
+                android:minHeight="1dp"
+                android:minWidth="1dp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/timer_repeat_date_1"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/timer_repeat_bg"
+                android:minHeight="1dp"
+                android:minWidth="1dp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/timer_repeat_date_2"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/timer_repeat_bg"
+                android:minHeight="1dp"
+                android:minWidth="1dp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/timer_repeat_date_3"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/timer_repeat_bg"
+                android:minHeight="1dp"
+                android:minWidth="1dp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/timer_repeat_date_4"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/timer_repeat_bg"
+                android:minHeight="1dp"
+                android:minWidth="1dp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/timer_repeat_date_5"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/timer_repeat_bg"
+                android:minHeight="1dp"
+                android:minWidth="1dp"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/timer_repeat_date_6"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/timer_repeat_bg"
+                android:minHeight="1dp"
+                android:minWidth="1dp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:gravity="center_vertical"
+            android:text="@string/timing_set"
+            android:textSize="17dp" />
+
+        <TimePicker
+            android:id="@+id/timer_trigger_time_picker"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/trigger_confirm_button"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/confirm_button_background"
+        android:text="@string/ok"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomEditText">
+        <attr name="number_limit" format="integer" />
+        <attr name="is_support_chinese" format="boolean" />
+    </declare-styleable>
+
+</resources>

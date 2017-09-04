@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5">
+
+    <include layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:id="@+id/device_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar"
+        android:background="@drawable/select_device_work_wifi_bg"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/select_device_wifi_tips_bg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tips_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_logo"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/switch_tips"
+            android:textColor="@color/color_929292"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/switch_tips_goback"
+            android:textColor="@color/color_929292"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loading_view"
+        layout="@layout/scanning_loading_layout"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/current_ssid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/switch_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text=""
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/switch_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_colour_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_color_selector"
+        android:gravity="center"
+        android:text="@string/switch_wifi"
+        android:textAllCaps="false"
+        android:textColor="@drawable/button_colour_text_selector"
+        android:textSize="@dimen/button_text" />
+
+    <TextView
+        android:id="@+id/connect_device_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:lineSpacingExtra="8dp"
+        android:text="@string/connect_device_tips"
+        android:textColor="@color/color_909090"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+
+        android:background="@color/white"
+        android:descendantFocusability="blocksDescendants">
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="#ff2f3239"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/selected_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="34dp"
+            android:layout_toRightOf="@+id/item_name"
+            android:background="@drawable/selected_icon" />
+
+    </RelativeLayout>
+</LinearLayout>

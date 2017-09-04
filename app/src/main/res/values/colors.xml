@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="lightblack">#AA000000</color>
+    <color name="color_2a8cff">#2a8cff</color>
+    <color name="color_2a8cfe">#2a8cfe</color>
+    <color name="color_2a6cff">#2a6cff</color>
+    <color name="color_afabbd">#afabbd</color>
+    <color name="text">#666666</color>
+    <color name="text2">#9a9a9a</color>
+    <color name="text3">#4CFFFFFF</color>
+    <color name="text4">#2a2a2a</color>
+    <color name="text5">#999999</color>
+    <color name="nickname_text_color">#91FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_color">#8c8c8c</color>
+    <color name="tips_color">#666666</color>
+    <color name="phone_tips">#575757</color>
+    <color name="hint_color">#999999</color>
+    <color name="gray_line">#DEDEDE</color>
+    <color name="line_color">#e3e3e3</color>
+    <color name="text_normal_hint">#666666</color>
+    <color name="default_divider_color">#e3e3e3</color>
+    <color name="default_background">#f8f8f8</color>
+    <color name="default_item_value_color">#FF5C5C5C</color>
+    <color name="default_item_hint_color">#915C5C5C</color>
+    <color name="default_item_label_color">#FF5C5C5C</color>
+    <color name="back_color">#818080</color>
+    <color name="copyright_text_color">#FF1C76F3</color>
+    <color name="location_background">#f8f8f8</color>
+    <color name="location_label">#999999</color>
+    <color name="location_text">#333</color>
+    <color name="wfc_cho_second_title">#999999</color>
+
+    <color name="gray">#cccccc</color>
+    <color name="color_666666">#666666</color>
+    <color name="text_gray">#999999</color>
+    <color name="color_e7e7e7">#E7E7E7</color>
+    <color name="color_f5f5f5">#f5f5f5</color>
+    <color name="color_e0e1e5">#e0e1e5</color>
+    <color name="color_4259F4">#4259F4</color>
+    <color name="color_2b8fff">#2b8fff</color>
+    <color name="color_f5ad47">#f5ad47</color>
+    <color name="color_929292">#929292</color>
+    <color name="color_737374">#737374</color>
+    <color name="color_909090">#909090</color>
+
+    <color name="color_ff0000">#ff0000</color>
+    <color name="color_009944">#009944</color>
+
+    <color name="scene_execute_button_normal">#FF9600</color>
+    <color name="scene_execute_button_pressed">#D8750A</color>
+    <color name="scene_execute_button_border">#B2D2FA</color>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<issues>
+    <issue>
+        <id>1</id>
+        <title>APP和插座如何绑定？</title>
+        <content>
+            1.长按插座总开关3秒，等待WIFI指示灯闪烁进入AP配网；\hhhhh2.选择常用的家庭或者工作WIFI，输入密码；\hhhhh3.切换WIFI，并连接设备发射的PHI_PLUG1_***网络WiFi。
+        </content>
+    </issue>
+    <issue>
+        <id>2</id>
+        <title>未找到PHI_PLUG1_***的设备WIFI怎么办？</title>
+        <content>
+            如果没有找到PHI_PLUG1_***设备WIFI,请检查插座wifi指示灯是否还在闪烁中。\hhhhh指示灯会持续闪烁5分钟，超时将自动退出AP配网模式，此时再次长按总开关3秒即可。
+        </content>
+    </issue>
+    <issue>
+        <id>3</id>
+        <title>正在连接过程中需要注意哪些？</title>
+        <content>1.连接过程中请不要关闭屏幕或退出APP。\hhhhh2.请保证WIFI环境稳定。
+        </content>
+    </issue>
+    <issue>
+        <id>4</id>
+        <title>WiFi处于哪些情况时无法成功配网？</title>
+        <content>
+            1.WIFI账号、密码错误\hhhhh2.WIFI信号弱\hhhhh\sssss此时，需要返回上一级页面重新输入WIFI账号、密码进行重新配置。\hhhhh3.使用了5G频段的路由器\hhhhh4.路由器连接已达到上限\hhhhh5.路由器隐藏SSID\hhhhh6.路由器开启了无线AP隔离\hhhhh7.路由器为双频模式\hhhhh8.路由器处于被保护状态\hhhhh\sssss此时请对路由器进行设置，或者更换其他可支持的路由器。
+        </content>
+    </issue>
+    <issue>
+        <id>5</id>
+        <title>设备连接超时怎么办？</title>
+        <content>设备连接超时，建议回到上一级页面更换更强信号的WiFi进行配置。</content>
+    </issue>
+    <issue>
+        <id>6</id>
+        <title>插座总开关有哪些按钮设置？</title>
+        <content>1.AP配网：长按总开关3秒，进入AP配网，WIFI指示灯100ms闪烁；\hhhhh2.恢复出厂设置：长按总开关15秒，插座将恢复出厂设置。
+        </content>
+    </issue>
+    <issue>
+        <id>7</id>
+        <title>WIFI指示灯有哪些闪烁？各表示什么？</title>
+        <content>
+            WIFI指示灯闪烁方式：\hhhhh1.AP配网：100ms闪烁，持续5分钟；\hhhhh2.设备未连接网络：500ms闪烁，一直循环；\hhhhh3.设备连接成功：WIFI指示灯一直亮；\hhhhh4.固件升级：1s闪烁，持续10秒。
+        </content>
+    </issue>
+
+
+</issues>

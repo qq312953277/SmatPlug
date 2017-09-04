@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5">
+
+    <include layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/wifi_info"
+        android:layout_below="@+id/title_bar"
+        android:background="@drawable/select_device_work_wifi_bg"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_equipment_wifi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wifi_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_rectangle_blue"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ssid_icon" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_909090" />
+
+                <EditText
+                    android:id="@+id/ssid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toLeftOf="@+id/change_btn"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:hint="@string/connection_wifi_message"
+                    android:inputType="text"
+                    android:textColor="@color/color_666666"
+                    android:textColorHint="@color/text_gray"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/change_btn"
+                    android:layout_width="71dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/button_color_selector"
+                    android:text="@string/change"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/button_colour_text_selector"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_909090" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wifi_lock_icon" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_909090" />
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toLeftOf="@+id/iv_eye_layout"
+                    android:background="@null"
+                    android:hint="@string/connection_tips"
+                    android:inputType="textPassword"
+                    android:textColor="@color/color_666666"
+                    android:textColorHint="@color/text_gray"
+                    android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/iv_eye_layout"
+                    android:background="@color/color_909090" />
+
+                <LinearLayout
+                    android:id="@+id/iv_eye_layout"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <ToggleButton
+                        android:id="@+id/iv_eye"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:button="@drawable/eye_selector"
+                        android:checked="false"
+                        android:minHeight="@null"
+                        android:minWidth="@null"
+                        android:text="@null"
+                        android:textOff="@null"
+                        android:textOn="@null" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/next_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:lineSpacingExtra="8dp"
+        android:text="@string/connect_device_tips2"
+        android:textColor="@color/color_909090"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_colour_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_color_selector"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textColor="@drawable/button_colour_text_selector"
+        android:textSize="@dimen/button_text" />
+
+</RelativeLayout>

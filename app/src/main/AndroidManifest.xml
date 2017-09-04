@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.phicomm.smartplug">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name_application"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label">
+        <meta-data
+            android:name="APP_CHANNEL"
+            android:value="${APP_CHANNEL_VALUE}" />
+        <meta-data
+            android:name="com.phicomm.smartplug.modules.data.local.imageglide.ImageGlideModule"
+            android:value="GlideModule" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5992b628cae7e753be001dd6" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${APP_CHANNEL_VALUE}" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".modules.splash.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".modules.mainpage.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.loginregister.registerloginmain.RegisterLoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.loginregister.login.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.loginregister.register.RegisterActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.loginregister.forgetpassword.ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.personal.personalnfo.ModifyPersonInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.personal.commonissues.CommonIssuesActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.personal.about.AboutActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.personal.personalnfo.NickNameModifyActvity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.personal.modifypassword.ModifyPasswordActivity"
+            android:screenOrientation="portrait" />
+
+        <!--scene-->
+        <activity
+            android:name=".modules.scene.addscene.ui.AddSceneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.scene.addscene.ui.AddTriggerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.scene.addscene.ui.AddTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.scene.scenedetail.SceneDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.personal.personalnfo.RoundClipImageActivity"
+            android:screenOrientation="portrait" />
+
+        <!--version update-->
+        <service android:name=".modules.personal.update.UpdateVersionService" />
+
+        <!--device-->
+        <activity
+            android:name=".modules.device.deviceconnect.ChooseDeviceTipsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.device.deviceconnect.ChooseWifiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.device.deviceconnect.ChooseDeviceWifiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.device.deviceconnect.AddDeviceActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.device.devicedetails.DeviceDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.device.devicedetails.PowerStatisticsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.device.devicemodify.ModifyDeviceActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".modules.device.receiver.NetWorkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- H5 -->
+        <activity
+            android:name=".modules.webh5.CommonWebActivity"
+            android:screenOrientation="portrait" />
+    </application>
+</manifest>

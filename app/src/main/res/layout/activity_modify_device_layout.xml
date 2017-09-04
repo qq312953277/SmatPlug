@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <TextView
+        android:id="@+id/device_name"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/title_bar"
+        android:gravity="center_vertical"
+        android:paddingLeft="27dp"
+        android:text="智能插线板"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_name"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <com.phicomm.smartplug.view.CustomEditText
+                android:id="@+id/master_switch_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/master_switch_btn_ayout"
+                android:background="@null"
+                android:enabled="false"
+                android:text=""
+                android:textColor="@color/color_666666"
+                android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+                app:number_limit="5" />
+
+            <LinearLayout
+                android:id="@+id/master_switch_btn_ayout"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/color_4259F4"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/master_switch_edit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/device_name_edit" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/master_switch_sure_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="@string/sure"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <com.phicomm.smartplug.view.CustomEditText
+                android:id="@+id/switch1_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/switch1_btn_layout"
+                android:background="@null"
+                android:enabled="false"
+                android:text=""
+                android:textColor="@color/color_666666"
+                android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+                app:number_limit="5" />
+
+            <LinearLayout
+                android:id="@+id/switch1_btn_layout"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/color_4259F4"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/switch1_edit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/device_name_edit" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/switch1_sure_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="@string/sure"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <com.phicomm.smartplug.view.CustomEditText
+                android:id="@+id/switch2_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/switch2_btn_layout"
+                android:background="@null"
+                android:enabled="false"
+                android:text=""
+                android:textColor="@color/color_666666"
+                android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+                app:number_limit="5" />
+
+            <LinearLayout
+                android:id="@+id/switch2_btn_layout"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/color_4259F4"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/switch2_edit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/device_name_edit" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/switch2_sure_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="@string/sure"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <com.phicomm.smartplug.view.CustomEditText
+                android:id="@+id/switch3_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/switch3_btn_layout"
+                android:background="@null"
+                android:enabled="false"
+                android:text=""
+                android:textColor="@color/color_666666"
+                android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+                app:number_limit="5" />
+
+            <LinearLayout
+                android:id="@+id/switch3_btn_layout"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/color_4259F4"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/switch3_edit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/device_name_edit" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/switch3_sure_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="@string/sure"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/delete_btn"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="13dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mac_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/mac"
+                android:textColor="@color/color_737374"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/firmware_version_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/firmware_version"
+                android:textColor="@color/color_737374"
+                android:textSize="15sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/color_737374"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/firmware_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/color_737374"
+                android:textSize="15sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_colour_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_color_selector"
+        android:gravity="center"
+        android:text="@string/delete_device"
+        android:textAllCaps="false"
+        android:textColor="@drawable/button_colour_text_selector"
+        android:textSize="@dimen/button_text" />
+
+</RelativeLayout>
